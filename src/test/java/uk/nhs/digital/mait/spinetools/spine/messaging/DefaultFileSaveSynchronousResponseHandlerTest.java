@@ -13,7 +13,6 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-// $Id: Edifact2xmlSuite.java 176 2017-02-28 15:55:23Z sfarrow $
 package uk.nhs.digital.mait.spinetools.spine.messaging;
 
 import java.io.File;
@@ -25,8 +24,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Rule;
 import org.junit.contrib.java.lang.system.RestoreSystemProperties;
-import uk.nhs.digital.mait.spinetools.spine.connection.ConnectionManager;
-import uk.nhs.digital.mait.spinetools.spine.connection.SdsTransmissionDetails;
 import uk.nhs.digital.mait.spinetools.spine.connection.ConnectionManager;
 import uk.nhs.digital.mait.spinetools.spine.connection.SdsTransmissionDetails;
 

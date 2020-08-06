@@ -13,11 +13,8 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-// $Id: Edifact2xmlSuite.java 176 2017-02-28 15:55:23Z sfarrow $
 package uk.nhs.digital.mait.spinetools.spine.connection;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.naming.directory.DirContext;
 import org.junit.After;
 import org.junit.AfterClass;
