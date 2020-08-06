@@ -1,0 +1,463 @@
+<itk:DistributionEnvelope xmlns:itk="urn:nhs-itk:ns:201005"><itk:header service="urn:nhs-itk:services:201005:SendCDADocument-v2-0" trackingid="23F1E260-BDBC-4DA7-8960-A2087AE87E8E"><itk:addresslist><itk:address type="2.16.840.1.113883.2.1.3.2.4.18.22" uri="urn:nhs-uk:addressing:ods:BBB:X0912"/><itk:address type="2.16.840.1.113883.2.1.3.2.4.18.22" uri="urn:nhs-uk:addressing:ods:X0913"/><itk:address type="2.16.840.1.113883.2.1.3.2.4.18.22" uri="urn:nhs-uk:addressing:ods:X0914"/></itk:addresslist><itk:auditIdentity><itk:id type="2.16.840.1.113883.2.1.3.2.4.18.27" uri="urn:nhs-uk:identity:AAA:XZ901"/></itk:auditIdentity><itk:manifest count="1"><itk:manifestitem mimetype="text/xml" profileid="urn:nhs-en:profile:nonCodedCDADocument-v2-0" base64="false" compressed="false" encrypted="false" id="uuid_E052276A-762F-4162-BED7-D38823BD3540"/></itk:manifest><itk:senderAddress type="2.16.840.1.113883.2.1.3.2.4.18.22" uri="urn:nhs-uk:addressing:ods:AAA:XZ901"/><itk:handlingSpecification><itk:spec key="urn:nhs-itk:ns:201005:infackrequested" value="true"/><itk:spec key="urn:nhs-itk:ns:201005:ackrequested" value="true"/><itk:spec key="urn:nhs-itk:ns:201005:interaction" value="urn:nhs-itk:interaction:primaryRecipientNonCodedCDADocument-v2-0"/></itk:handlingSpecification></itk:header><itk:payloads count="1"><itk:payload id="uuid_E052276A-762F-4162-BED7-D38823BD3540"><ClinicalDocument xmlns="urn:hl7-org:v3"
+                  xmlns:npfitlc="NPFIT:HL7:Localisation"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:wsa="http://www.w3.org/2005/08/addressing"
+                  xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:itk="urn:nhs-itk:ns:201005"
+                  classCode="DOCCLIN"
+                  moodCode="EVN">				
+            <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>				
+            <npfitlc:messageType root="2.16.840.1.113883.2.1.3.2.4.18.17" extension="POCD_MT010011GB02"/>				
+            <id root="A709A442-3CF4-476E-8377-376500E829C9"/>				
+            <code code="229059009" codeSystem="2.16.840.1.113883.2.1.3.2.4.15"/>				
+            <title>Report</title>				
+            <effectiveTime value="201105192000+01"/>				
+            <confidentialityCode code="V"
+                        displayName="very restricted"
+                        codeSystem="2.16.840.1.113883.5.25"/>				
+            <setId root="411910CF-1A76-4330-98FE-C345DDEE5553"/>				
+            <versionNumber value="1"/>				
+            <recordTarget typeCode="RCT" contextControlCode="OP">					
+               <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                         extension="COCD_TP145201GB01#PatientRole"/>					
+               <patientRole classCode="PAT">						
+                  <templateId extension="COCD_TP145201GB01#PatientRole"
+                     root="2.16.840.1.113883.2.1.3.2.4.18.2"/>						
+                  <id extension="K12345"
+             root="2.16.840.1.113883.2.1.3.2.4.18.24"
+             assigningAuthorityName="V396A:Medway PCT"/>						
+                  <id extension="993254128" root="2.16.840.1.113883.2.1.3.2.4.18.23"/>						
+                  <addr use="H">							
+                     <streetAddressLine>17, County Court</streetAddressLine>							
+                     <streetAddressLine>Woodtown</streetAddressLine>							
+                     <streetAddressLine>Medway</streetAddressLine>							
+                     <postalCode>ME5 FS3</postalCode>						
+                  </addr>						
+                  <addr use="PHYS">							
+                     <streetAddressLine>Hightown Retirement Home</streetAddressLine>							
+                     <streetAddressLine>2, Brancaster Road</streetAddressLine>							
+                     <streetAddressLine>Medway</streetAddressLine>							
+                     <streetAddressLine>Kent</streetAddressLine>							
+                     <postalCode>ME5 FL5</postalCode>						
+                  </addr>						
+                  <telecom value="tel:01634775667" use="H"/>						
+                  <telecom value="tel:01634451628" use="HV"/>						
+                  <telecom value="mailto:mark.smith@emailfree.co.uk" use="H"/>						
+                  <patient classCode="PSN" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145201GB01#patientPatient"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <name>								
+                        <prefix>Mr</prefix>								
+                        <family>Smith</family>								
+                        <given>Mark</given>							
+                     </name>							
+                     <administrativeGenderCode codeSystem="2.16.840.1.113883.2.1.3.2.4.16.25"
+                                      displayName="Male"
+                                      code="1"/>							
+                     <birthTime value="19490101"/>							
+                     <languageCommunication>								
+                        <templateId extension="COCD_TP145201GB01#languageCommunication"
+                           root="2.16.840.1.113883.2.1.3.2.4.18.2"/>								
+                        <languageCode code="en"/>							
+                     </languageCommunication>						
+                  </patient>						
+                  <providerOrganization classCode="ORG" determinerCode="INSTANCE">							
+                     <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                        extension="COCD_TP145201GB01#providerOrganization"/>							
+                     <id root="2.16.840.1.113883.2.1.3.2.4.19.1" extension="V396F"/>							
+                     <name>Medway Medical Practice</name>							
+                     <telecom value="tel:01634111222" use="WP"/>							
+                     <addr use="WP">								
+                        <streetAddressLine>Springer Street</streetAddressLine>								
+                        <streetAddressLine>Medway</streetAddressLine>								
+                        <postalCode>ME5 5TY</postalCode>							
+                     </addr>							
+                     <standardIndustryClassCode code="001"
+                                       displayName="GP Practice"
+                                       codeSystem="2.16.840.1.113883.2.1.3.2.4.17.289"/>						
+                  </providerOrganization>					
+               </patientRole>				
+            </recordTarget>				
+            <author typeCode="AUT" contextControlCode="OP">					
+               <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                         extension="COCD_TP145200GB01#AssignedAuthor"/>					
+               <functionCode code="OA"
+                    displayName="Originating Author"
+                    codeSystem="2.16.840.1.113883.2.1.3.2.4.17.178"/>					
+               <time value="201105192000+01"/>					
+               <assignedAuthor classCode="ASSIGNED">						
+                  <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                     extension="COCD_TP145200GB01#AssignedAuthor"/>						
+                  <id root="2.16.840.1.113883.2.1.3.2.4.18.24"
+             extension="101"
+             assigningAuthorityName="5L399:Medway NHS Foundation Trust"/>						
+                  <code code="OOH02"
+               codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196"
+               displayName="Nurse Practitioner"/>						
+                  <assignedPerson classCode="PSN" determinerCode="INSTANCE">							
+                     <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                        extension="COCD_TP145200GB01#assignedPerson"/>							
+                     <name>								
+                        <given>Mary</given>								
+                        <family>Jones</family>							
+                     </name>						
+                  </assignedPerson>						
+                  <representedOrganization classCode="ORG" determinerCode="INSTANCE">							
+                     <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                        extension="COCD_TP145200GB01#representedOrganization"/>							
+                     <id root="2.16.840.1.113883.2.1.3.2.4.19.1" extension="5L399"/>							
+                     <name>Medway NHS Foundation Trust</name>						
+                  </representedOrganization>					
+               </assignedAuthor>				
+            </author>				
+            <dataEnterer typeCode="ENT" contextControlCode="OP">					
+               <npfitlc:contentId extension="COCD_TP145205GB01#AssignedEntity"
+                         root="2.16.840.1.113883.2.1.3.2.4.18.16"/>					
+               <assignedEntity classCode="ASSIGNED">						
+                  <templateId extension="COCD_TP145205GB01#AssignedEntity"
+                     root="2.16.840.1.113883.2.1.3.2.4.18.2"/>						
+                  <id root="2.16.840.1.113883.2.1.3.2.4.18.24"
+             extension="103"
+             assigningAuthorityName="5L399:Medway NHS Foundation Trust"/>						
+                  <assignedPerson classCode="PSN" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145205GB01#assignedPerson"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <name>								
+                        <given>Steve</given>								
+                        <family>Cook</family>							
+                     </name>						
+                  </assignedPerson>					
+               </assignedEntity>				
+            </dataEnterer>				
+            <informant typeCode="INF" contextControlCode="OP">					
+               <npfitlc:contentId extension="COCD_TP145007UK03#RelatedEntity"
+                         root="2.16.840.1.113883.2.1.3.2.4.18.16"/>					
+               <relatedEntity classCode="PRS">						
+                  <templateId extension="COCD_TP145007UK03#RelatedEntity"
+                     root="2.16.840.1.113883.2.1.3.2.4.18.2"/>						
+                  <code code="01"
+               codeSystem="2.16.840.1.113883.2.1.3.2.4.16.45"
+               displayName="Spouse"/>					
+               </relatedEntity>				
+            </informant>				
+            <custodian typeCode="CST">					
+               <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                         extension="COCD_TP145018UK03#AssignedCustodian"/>					
+               <assignedCustodian classCode="ASSIGNED">						
+                  <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                     extension="COCD_TP145018UK03#AssignedCustodian"/>						
+                  <representedCustodianOrganization classCode="ORG" determinerCode="INSTANCE">							
+                     <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                        extension="COCD_TP145018UK03#representedCustodianOrganization"/>							
+                     <id root="2.16.840.1.113883.2.1.3.2.4.19.1" extension="5L3"/>							
+                     <name>Medway NHS Foundation Trust</name>						
+                  </representedCustodianOrganization>					
+               </assignedCustodian>				
+            </custodian>				
+            <informationRecipient typeCode="PRCP">					
+               <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                         extension="COCD_TP145202GB01#IntendedRecipient"/>					
+               <intendedRecipient classCode="ASSIGNED">						
+                  <templateId extension="COCD_TP145202GB01#IntendedRecipient"
+                     root="2.16.840.1.113883.2.1.3.2.4.18.2"/>						
+                  <npfitlc:recipientRoleCode codeSystem="2.16.840.1.113883.2.1.3.2.4.17.124"
+                                    code="NR0600"
+                                    displayName="Specialist Nurse Practitioner"/>						
+                  <id root="2.16.840.1.113883.2.1.3.2.4.18.24"
+             extension="1234512345"
+             assigningAuthorityName="V396A:Medway PCT"/>						
+                  <telecom value="mailto:t.hall@emailfree.co.uk"/>						
+                  <informationRecipient classCode="PSN" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145202GB01#assignedPerson"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <name>								
+                        <prefix>Mr</prefix>								
+                        <family>Hall</family>								
+                        <given>Terence</given>							
+                     </name>						
+                  </informationRecipient>						
+                  <receivedOrganization classCode="ORG" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145202GB01#representedOrganization"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <id extension="V396A" root="2.16.840.1.113883.2.1.3.2.4.19.1"/>							
+                     <name>Medway PCT</name>						
+                  </receivedOrganization>					
+               </intendedRecipient>				
+            </informationRecipient>				
+            <informationRecipient typeCode="TRC">					
+               <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                         extension="COCD_TP145202GB01#IntendedRecipient"/>					
+               <intendedRecipient classCode="ASSIGNED">						
+                  <templateId extension="COCD_TP145202GB01#IntendedRecipient"
+                     root="2.16.840.1.113883.2.1.3.2.4.18.2"/>						
+                  <npfitlc:recipientRoleCode code="NR0260"
+                                    codeSystem="2.16.840.1.113883.2.1.3.2.4.17.124"
+                                    displayName="General Medical Practitioner"/>						
+                  <id nullFlavor="NI"/>						
+                  <informationRecipient classCode="PSN" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145202GB01#assignedPerson"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <name>								
+                        <given>Pauline</given>								
+                        <family>Shelley</family>							
+                     </name>						
+                  </informationRecipient>						
+                  <receivedOrganization classCode="ORG" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145202GB01#representedOrganization"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <id extension="W123" root="2.16.840.1.113883.2.1.3.2.4.19.1"/>							
+                     <name>Medway Medical Practice</name>						
+                  </receivedOrganization>					
+               </intendedRecipient>				
+            </informationRecipient>				
+            <authenticator typeCode="AUTHEN">					
+               <npfitlc:contentId extension="COCD_TP145205GB01#AssignedEntity"
+                         root="2.16.840.1.113883.2.1.3.2.4.18.16"/>					
+               <time value="201105192015+01"/>					
+               <signatureCode nullFlavor="NA"/>					
+               <assignedEntity classCode="ASSIGNED">						
+                  <templateId extension="COCD_TP145205GB01#AssignedEntity"
+                     root="2.16.840.1.113883.2.1.3.2.4.18.2"/>						
+                  <id root="2.16.840.1.113883.2.1.3.2.4.18.24"
+             extension="100"
+             assigningAuthorityName="5L399:Medway NHS Foundation Trust"/>						
+                  <assignedPerson classCode="PSN" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145205GB01#assignedPerson"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <name>								
+                        <given>Bruce</given>								
+                        <family>Weller</family>							
+                     </name>						
+                  </assignedPerson>					
+               </assignedEntity>				
+            </authenticator>				
+            <participant typeCode="CON" contextControlCode="OP">					
+               <npfitlc:contentId extension="COCD_TP145214GB01#AssociatedEntity"
+                         root="2.16.840.1.113883.2.1.3.2.4.18.16"/>					
+               <associatedEntity classCode="ASSIGNED">						
+                  <templateId extension="COCD_TP145214GB01#AssociatedEntity"
+                     root="2.16.840.1.113883.2.1.3.2.4.18.2"/>						
+                  <id root="2.16.840.1.113883.2.1.3.2.4.18.24"
+             extension="000000000"
+             assigningAuthorityName="V396AA:Medway PCT"/>						
+                  <associatedPerson classCode="PSN" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145214GB01#associatedPerson"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <name>Bill Lydon</name>						
+                  </associatedPerson>						
+                  <scopingOrganization classCode="ORG" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145214GB01#scopingOrganization"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <id root="2.16.840.1.113883.2.1.3.2.4.19.1" extension="V396AA"/>							
+                     <name>Medway PCT</name>						
+                  </scopingOrganization>					
+               </associatedEntity>				
+            </participant>				
+            <participant typeCode="CALLBCK" contextControlCode="OP">					
+               <npfitlc:contentId extension="COCD_TP145007UK03#RelatedEntity"
+                         root="2.16.840.1.113883.2.1.3.2.4.18.16"/>					
+               <associatedEntity classCode="PRS">						
+                  <templateId extension="COCD_TP145007UK03#RelatedEntity"
+                     root="2.16.840.1.113883.2.1.3.2.4.18.2"/>						
+                  <code code="01"
+               codeSystem="2.16.840.1.113883.2.1.3.2.4.16.45"
+               displayName="Spouse"/>						
+                  <associatedPerson classCode="PSN" determinerCode="INSTANCE">							
+                     <templateId extension="COCD_TP145007UK03#relationshipHolder"
+                        root="2.16.840.1.113883.2.1.3.2.4.18.2"/>							
+                     <name>Nora Lydon</name>						
+                  </associatedPerson>					
+               </associatedEntity>				
+            </participant>				
+            <documentationOf typeCode="DOC">					
+               <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                         extension="COCD_TP146227GB02#ServiceEvent"/>					
+               <serviceEvent classCode="PROC" moodCode="EVN">						
+                  <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                     extension="COCD_TP146227GB02#ServiceEvent"/>						
+                  <id root="8371D2F1-123F-4A14-A1AC-C6C8023103CF"/>						
+                  <code code="73761001"
+               codeSystem="2.16.840.1.113883.2.1.3.2.4.15"
+               displayName="colonoscopy"/>						
+                  <effectiveTime>							
+                     <low value="201105192000+01"/>							
+                     <high value="201105192045+01"/>						
+                  </effectiveTime>						
+                  <performer typeCode="PRF">							
+                     <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                        extension="COCD_TP146227GB02#performer"/>							
+                     <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                               extension="COCD_TP145210GB01#AssignedEntity"/>							
+                     <assignedEntity classCode="ASSIGNED">								
+                        <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                           extension="COCD_TP145210GB01#AssignedEntity"/>								
+                        <id nullFlavor="NI"/>								
+                        <assignedPerson classCode="PSN" determinerCode="INSTANCE">									
+                           <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                              extension="COCD_TP145210GB01#assignedPerson"/>									
+                           <name>Joe Bloggs</name>								
+                        </assignedPerson>								
+                        <representedOrganization classCode="ORG" determinerCode="INSTANCE">									
+                           <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                              extension="COCD_TP145210GB01#representedOrganization"/>									
+                           <id root="2.16.840.1.113883.2.1.3.2.4.19.1" extension="8785675885765767"/>									
+                           <name>xx organisation</name>								
+                        </representedOrganization>							
+                     </assignedEntity>						
+                  </performer>					
+               </serviceEvent>				
+            </documentationOf>				
+            <authorization typeCode="AUTH">					
+               <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                         extension="COCD_TP146226GB02#Consent"/>					
+               <consent classCode="CONS" moodCode="EVN">						
+                  <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                     extension="COCD_TP146226GB02#Consent"/>						
+                  <id root="7AFDCAD6-1CE3-45A6-A176-DDAC27F46C87"/>						
+                  <code code="319951000000105"
+               codeSystem="2.16.840.1.113883.2.1.3.2.4.15"
+               displayName="consent given to share patient data with specified third party"/>						
+                  <statusCode code="completed"/>					
+               </consent>				
+            </authorization>				
+            <componentOf typeCode="COMP">					
+               <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                         extension="COCD_TP146228GB01#EncompassingEncounter"/>					
+               <encompassingEncounter classCode="ENC" moodCode="EVN">						
+                  <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                     extension="COCD_TP146228GB01#EncompassingEncounter"/>						
+                  <id root="3D3B95B5-24AA-42ED-9F77-BE7ECEB78C3E"/>						
+                  <code code="11429006"
+               codeSystem="2.16.840.1.113883.2.1.3.2.4.15"
+               displayName="Consultation"/>						
+                  <effectiveTime>							
+                     <low value="201105191945+01"/>							
+                     <high value="201105192015+01"/>						
+                  </effectiveTime>						
+                  <dischargeDispositionCode nullFlavor="NA"/>						
+                  <responsibleParty typeCode="RESP">							
+                     <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                        extension="COCD_TP146228GB01#responsibleParty"/>							
+                     <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                               extension="COCD_TP145210GB01#AssignedEntity"/>							
+                     <assignedEntity classCode="ASSIGNED">								
+                        <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                           extension="COCD_TP145210GB01#AssignedEntity"/>								
+                        <id nullFlavor="NI"/>								
+                        <code code="NR0010"
+                     codeSystem="2.16.840.1.113883.2.1.3.2.4.17.124"
+                     displayName="Medical Director"/>								
+                        <assignedPerson classCode="PSN" determinerCode="INSTANCE">									
+                           <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                              extension="COCD_TP145210GB01#assignedPerson"/>									
+                           <name>										
+                              <given>Dave</given>										
+                              <family>Cornwell</family>									
+                           </name>								
+                        </assignedPerson>								
+                        <representedOrganization classCode="ORG" determinerCode="INSTANCE">									
+                           <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                              extension="COCD_TP145210GB01#representedOrganization"/>									
+                           <id root="2.16.840.1.113883.2.1.3.2.4.19.1" extension="VDE232323"/>									
+                           <name>Medway South Walk-in Centre</name>								
+                        </representedOrganization>							
+                     </assignedEntity>						
+                  </responsibleParty>						
+                  <location typeCode="LOC">							
+                     <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                        extension="COCD_TP146228GB01#location"/>							
+                     <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                               extension="COCD_TP145211GB01#HealthCareFacility"/>							
+                     <healthCareFacility classCode="SDLOC">								
+                        <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                           extension="COCD_TP145211GB01#HealthCareFacility"/>								
+                        <code code="313161000000107"
+                     codeSystem="2.16.840.1.113883.2.1.3.2.4.15"
+                     displayName="Example Care Setting"/>							
+                     </healthCareFacility>						
+                  </location>					
+               </encompassingEncounter>				
+            </componentOf>				
+            <component typeCode="COMP" contextConductionInd="true">					
+               <structuredBody classCode="DOCBODY" moodCode="EVN">						
+                  <component typeCode="COMP" contextConductionInd="true">							
+                     <section classCode="DOCSECT" moodCode="EVN">								
+                        <id root="7AFDCAD6-1CE3-45A6-A176-DDAC27F46C87"/>								
+                        <component typeCode="COMP" contextConductionInd="true">									
+                           <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                                     extension="COCD_TP146229GB01#Section1"/>									
+                           <section classCode="DOCSECT" moodCode="EVN">										
+                              <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                                 extension="COCD_TP146229GB01#Section1"/>										
+                              <id root="E27F4264-C005-4BC3-BFA1-57C3E64B30B7"/>										
+                              <title>Document Section 1</title>										
+                              <text>											
+                                 <content>Some text associated with Document Section 1</content>										
+                              </text>										
+                              <author typeCode="AUT" contextControlCode="OP">											
+                                 <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                                    extension="COCD_TP146229GB01#author"/>											
+                                 <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                                           extension="COCD_TP145200GB01#AssignedAuthor"/>											
+                                 <functionCode code="OA"
+                                      displayName="Originating Author"
+                                      codeSystem="2.16.840.1.113883.2.1.3.2.4.17.178"/>											
+                                 <time value="200708012055+01"/>											
+                                 <assignedAuthor classCode="ASSIGNED">												
+                                    <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                                       extension="COCD_TP145200GB01#AssignedAuthor"/>												
+                                    <id root="2.16.840.1.113883.2.1.3.2.4.18.24"
+                               extension="102"
+                               assigningAuthorityName="5L399:Medway South Out of Hours Centre"/>												
+                                    <code code="OOH02"
+                                 codeSystem="2.16.840.1.113883.2.1.3.2.4.17.196"
+                                 displayName="Nurse Practitioner"/>												
+                                    <assignedPerson classCode="PSN" determinerCode="INSTANCE">													
+                                       <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                                          extension="COCD_TP145200GB01#assignedPerson"/>													
+                                       <name>														
+                                          <given>Mary</given>														
+                                          <family>Flemming</family>													
+                                       </name>												
+                                    </assignedPerson>												
+                                    <representedOrganization classCode="ORG" determinerCode="INSTANCE">													
+                                       <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                                          extension="COCD_TP145200GB01#representedOrganization"/>													
+                                       <id root="2.16.840.1.113883.2.1.3.2.4.19.1" extension="5L399"/>													
+                                       <name>Medway South Out of Hours Centre</name>												
+                                    </representedOrganization>											
+                                 </assignedAuthor>										
+                              </author>									
+                           </section>								
+                        </component>								
+                        <component typeCode="COMP" contextConductionInd="true">									
+                           <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                                     extension="COCD_TP146229GB01#Section1"/>									
+                           <section classCode="DOCSECT" moodCode="EVN">										
+                              <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                                 extension="COCD_TP146229GB01#Section1"/>										
+                              <id root="773110DB-288F-4B32-8DE1-362646A65E9A"/>										
+                              <title>Document Section 2</title>										
+                              <text>											
+                                 <content>Some text associated with Document Section 2</content>										
+                              </text>									
+                           </section>								
+                        </component>								
+                        <component typeCode="COMP" contextConductionInd="true">									
+                           <npfitlc:contentId root="2.16.840.1.113883.2.1.3.2.4.18.16"
+                                     extension="COCD_TP146229GB01#Section1"/>									
+                           <section classCode="DOCSECT" moodCode="EVN">										
+                              <templateId root="2.16.840.1.113883.2.1.3.2.4.18.2"
+                                 extension="COCD_TP146229GB01#Section1"/>										
+                              <id root="8271D2F1-123F-4A14-A1AC-C6C8023203CF"/>										
+                              <title>Document Section 3</title>										
+                              <text>											
+                                 <content>Some text associated with Document Section 3</content>										
+                              </text>									
+                           </section>								
+                        </component>							
+                     </section>						
+                  </component>					
+               </structuredBody>				
+            </component>			
+         </ClinicalDocument></itk:payload></itk:payloads></itk:DistributionEnvelope>

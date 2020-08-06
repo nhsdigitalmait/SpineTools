@@ -13,12 +13,10 @@
  See the License for the specific language governing permissions and
  limitations under the License.
  */
-// $Id: CommandLine.java 95 2017-04-20 11:58:40Z sfarrow $
 
-/*
+ /*
     Rev 95 Fixed a parsing defect in Attachment.getMimeType
-*/
-
+ */
 package uk.nhs.digital.mait.spinetools.spine.commandline;
 
 import uk.nhs.digital.mait.distributionenvelopetools.itk.distributionenvelope.DistributionEnvelope;
@@ -30,11 +28,12 @@ import uk.nhs.digital.mait.spinetools.spine.messaging.EbXmlMessage;
 import uk.nhs.digital.mait.spinetools.spine.messaging.ITKDistributionEnvelopeAttachment;
 import uk.nhs.digital.mait.spinetools.spine.messaging.Sendable;
 import uk.nhs.digital.mait.spinetools.spine.messaging.SpineHL7Message;
-import uk.nhs.digital.mait.spinetools.spine.messaging.SpineSOAPRequest;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Properties;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static uk.nhs.digital.mait.spinetools.spine.connection.ConditionalCompilationControls.DUMP_RECEIVED_MESSAGE;
@@ -72,11 +71,10 @@ public class CommandLine {
     private static int delayPeriod = 1000;
 
     /**
-     * @param args the command line arguments
-     * param 0 properties file name or "-version"
-     * param 1 option send|receive|sendpayload|sendall|xmitde|demo
+     * @param args the command line arguments param 0 properties file name or
+     * "-version" param 1 option send|receive|sendpayload|sendall|xmitde|demo
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
 
         if (args[0].equals("-version")) {
             dumpVersionInfo();
@@ -417,16 +415,24 @@ public class CommandLine {
         return new String(buffer);
     }
 
-    private static void dumpVersionInfo() {
-        System.out.println("SpineTools $Id: CommandLine.java 95 2017-04-20 11:58:40Z sfarrow $\r\n"+
-                "Conditional Compilation Control Settings:\r\n"+
-                "LDAPOVERTLS:\t\t"+LDAPOVERTLS+"\r\n" +
-                "LDAPS:\t\t\t"+LDAPS+"\r\n" +
-                "OPENTEST:\t\t"+OPENTEST+"\r\n" +
-                "TESTHARNESS:\t\t"+TESTHARNESS+"\r\n" +
-                "DUMP_RECEIVED_MESSAGE:\t"+DUMP_RECEIVED_MESSAGE+"\r\n" +
-                "cleartext:\t\t"+cleartext+"\r\n" +
-                "otwMessageLogging:\t"+otwMessageLogging+"\r\n" 
+    private static void dumpVersionInfo() throws IOException {
+        ClassLoader classLoader = CommandLine.class.getClassLoader();
+        Properties properties = new Properties();
+        properties.load(classLoader.getResourceAsStream("git.properties"));
+        String versionString = String.format("SpineTools-%s %s %s",
+                properties.getProperty("git.build.version"),
+                properties.getProperty("git.commit.id.abbrev"),
+                properties.getProperty("git.commit.time"));
+        System.out.println(versionString);
+
+        System.out.println("Conditional Compilation Control Settings:\r\n"
+                + "LDAPOVERTLS:\t\t" + LDAPOVERTLS + "\r\n"
+                + "LDAPS:\t\t\t" + LDAPS + "\r\n"
+                + "OPENTEST:\t\t" + OPENTEST + "\r\n"
+                + "TESTHARNESS:\t\t" + TESTHARNESS + "\r\n"
+                + "DUMP_RECEIVED_MESSAGE:\t" + DUMP_RECEIVED_MESSAGE + "\r\n"
+                + "cleartext:\t\t" + cleartext + "\r\n"
+                + "otwMessageLogging:\t" + otwMessageLogging + "\r\n"
         );
     }
 }
