@@ -15,6 +15,7 @@
  */
 package uk.nhs.digital.mait.spinetools.spine.messaging;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import org.junit.After;
@@ -40,6 +41,10 @@ public class ITKTrunkHandlerTest {
 
     private ITKTrunkHandler instance;
 
+    private static final String SAVED_MESSAGES_FOLDER_NAME = "src/test/resources/savedmessages";
+
+    private static final File SAVED_MESSAGES_FOLDER = new File(SAVED_MESSAGES_FOLDER_NAME);
+
     public ITKTrunkHandlerTest() {
     }
 
@@ -56,6 +61,8 @@ public class ITKTrunkHandlerTest {
 
         System.setProperty("org.warlock.spine.sds.url", "http://localhost");
         System.setProperty("org.warlock.spine.sds.urlresolver", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/urlresolver.txt");
+
+        System.setProperty("org.warlock.spine.messaging.defaultdistributionenvelopehandler.filesavedirectory", SAVED_MESSAGES_FOLDER_NAME);
     }
 
     @AfterClass
@@ -64,11 +71,22 @@ public class ITKTrunkHandlerTest {
 
     @Before
     public void setUp() {
+        tidyLogs();
         instance = new ITKTrunkHandler();
+    }
+
+    private void tidyLogs() {
+        if (SAVED_MESSAGES_FOLDER.exists()) {
+            for (File f : SAVED_MESSAGES_FOLDER.listFiles()) {
+                f.delete();
+            }
+            SAVED_MESSAGES_FOLDER.delete();
+        }
     }
 
     @After
     public void tearDown() {
+        tidyLogs();
     }
 
     /**
@@ -97,6 +115,10 @@ public class ITKTrunkHandlerTest {
         ITKDistributionEnvelopeAttachment attachment = new ITKDistributionEnvelopeAttachment(de);
         m.addAttachment(attachment);
         instance.handle(m);
+
+        assertTrue(SAVED_MESSAGES_FOLDER.exists());
+        int expResult = 1;
+        assertEquals(expResult, SAVED_MESSAGES_FOLDER.list().length);
     }
 
 }
