@@ -334,7 +334,7 @@ public class EbXmlMessage extends Sendable {
      * whether the acknowledgement is returned synchronously or asynchronously.
      *
      * The acknowledgement is made from the template at
-     * org.warlock.spine.messaging.ebxmlacktemplate.xml which is part of the
+     * uk.nhs.digital.mait.spinetools.spine.messaging.ebxmlacktemplate.xml which is part of the
      * package contents.
      *
      * @param replaceCpaId boolean indicating whether to replace the CpaId or not

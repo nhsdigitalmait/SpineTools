@@ -28,28 +28,29 @@ import uk.nhs.digital.mait.distributionenvelopetools.itk.distributionenvelope.Di
  * @author simonfarrow
  */
 public class DistributionEnvelopeHandlerTest {
-    
+
     public DistributionEnvelopeHandlerTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
 
     /**
      * Test of handle method, of class DistributionEnvelopeHandler.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -67,5 +68,5 @@ public class DistributionEnvelopeHandlerTest {
             System.out.println("handle called");
         }
     }
-    
+
 }

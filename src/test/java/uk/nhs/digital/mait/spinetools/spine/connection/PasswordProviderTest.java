@@ -29,23 +29,23 @@ import static org.junit.Assert.*;
 public class PasswordProviderTest {
 
     private PasswordProviderImpl instance;
-    
+
     public PasswordProviderTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
         instance = new PasswordProviderImpl();
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -83,5 +83,5 @@ public class PasswordProviderTest {
             return "";
         }
     }
-    
+
 }

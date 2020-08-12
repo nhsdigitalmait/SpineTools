@@ -29,7 +29,7 @@ public class SDSconnection {
     /**
      * Property name for setting the SDS URL in System.properties
      */
-    public static final String SDSURL = "org.warlock.spine.sds.url";
+    public static final String SDSURL = "uk.nhs.digital.mait.spinetools.spine.sds.url";
     
     protected InitialLdapContext ldapContext = null;
     protected String sdsUrl = null;
@@ -47,7 +47,7 @@ public class SDSconnection {
     }
     
     /**
-     * Connect using the URL contained in system property org.warlock.spine.sds.url
+     * Connect using the URL contained in system property uk.nhs.digital.mait.spinetools.spine.sds.url
      * @throws Exception 
      */
     public SDSconnection() 
@@ -95,7 +95,7 @@ public class SDSconnection {
             env.put(Context.SECURITY_PROTOCOL, "ssl");
             env.put(Context.SECURITY_AUTHENTICATION, "none");
             if (ConditionalCompilationControls.LDAPOVERTLS && !ConditionalCompilationControls.OPENTEST) {
-                env.put("java.naming.ldap.factory.socket", "org.warlock.spine.connection.SpineSecurityContext");
+                env.put("java.naming.ldap.factory.socket", "uk.nhs.digital.mait.spinetools.spine.connection.SpineSecurityContext");
             }
         }
         ldapContext = new InitialLdapContext(env, null);

@@ -52,8 +52,8 @@ import uk.nhs.digital.mait.spinetools.spine.messaging.SynchronousResponseHandler
 public class Transmitter
         extends java.lang.Thread {
 
-    private static final String PROXYHOST = "org.warlock.spine.proxyhost";
-    private static final String PROXYPORT = "org.warlock.spine.proxyport";
+    private static final String PROXYHOST = "uk.nhs.digital.mait.spinetools.spine.proxyhost";
+    private static final String PROXYPORT = "uk.nhs.digital.mait.spinetools.spine.proxyport";
     private Sendable sendable = null;
     private String responseHeader = null;
 

@@ -45,12 +45,12 @@ public class CommandLineTest {
 
     @BeforeClass
     public static void setUpClass() {
-        System.setProperty("org.warlock.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
-        System.setProperty("org.warlock.spine.sds.myasid", "SIAB-001");
-        System.setProperty("org.warlock.spine.sds.mypartykey", "YEA-801248");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.myasid", "SIAB-001");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.mypartykey", "YEA-801248");
 
-        System.setProperty("org.warlock.spine.sds.urlresolver", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/urlresolver.txt");
-        System.setProperty("org.warlock.spine.odstarget", "YEA");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.urlresolver", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/urlresolver.txt");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.odstarget", "YEA");
     }
 
     @AfterClass
@@ -102,6 +102,18 @@ public class CommandLineTest {
     public void testMainReceive() throws IOException {
         System.out.println("mainReceive");
         CommandLine.main(new String[]{PROPERTIES_FILE, "receive"});
+    }
+
+    /**
+     * Test of main method, of class CommandLine.
+     */
+    @Test
+    public void testMain() throws Exception {
+        System.out.println("main");
+        String[] args = null;
+        CommandLine.main(args);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
 
 }

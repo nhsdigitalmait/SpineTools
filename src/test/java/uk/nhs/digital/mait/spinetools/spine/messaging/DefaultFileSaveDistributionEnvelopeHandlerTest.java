@@ -47,7 +47,7 @@ public class DefaultFileSaveDistributionEnvelopeHandlerTest {
 
     @BeforeClass
     public static void setUpClass() {
-        System.setProperty("org.warlock.spine.messaging.defaultdistributionenvelopehandler.filesavedirectory", "test");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.messaging.defaultdistributionenvelopehandler.filesavedirectory", "test");
     }
 
     @AfterClass

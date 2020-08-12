@@ -52,12 +52,12 @@ public class BasicSessionCaptorTest {
 
     @Before
     public void setUp() {
-        System.setProperty("org.warlock.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
-        System.setProperty("org.warlock.spine.sds.myasid", "SIAB-001");
-        System.setProperty("org.warlock.spine.sds.mypartykey", "YEA-801248");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.myasid", "SIAB-001");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.mypartykey", "YEA-801248");
 
-        System.setProperty("org.warlock.spine.messaging.BasicSessionCaptor.directory", "test");
-        System.setProperty("org.warlock.spine.messaging.BasicSessionCaptor.extension", ".log");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.messaging.BasicSessionCaptor.directory", "test");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.messaging.BasicSessionCaptor.extension", ".log");
 
         deleteLogs();
 

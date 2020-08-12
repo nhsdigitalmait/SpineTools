@@ -78,28 +78,28 @@ public class SpineSecurityContext
     /**
      * System property name for the certificate keystore file.
      */
-    public static final String USESSLCONTEXT = "org.warlock.http.spine.certs";    
+    public static final String USESSLCONTEXT = "uk.nhs.digital.mait.spinetools.http.spine.certs";    
     
     /**
      * System property name for the truststore file.
      */
-    public static final String USESSLTRUST = "org.warlock.http.spine.trust";
+    public static final String USESSLTRUST = "uk.nhs.digital.mait.spinetools.http.spine.trust";
     
     /**
      * System property name for the certificate keystore password
      */
-    public static final String SSLPASS = "org.warlock.http.spine.sslcontextpass";
+    public static final String SSLPASS = "uk.nhs.digital.mait.spinetools.http.spine.sslcontextpass";
     
     /**
      * System property name for the trust store password
      */
-    public static final String TRUSTPASS = "org.warlock.http.spine.trustpass";
+    public static final String TRUSTPASS = "uk.nhs.digital.mait.spinetools.http.spine.trustpass";
     
     /**
      * System property name for the SSL algorithm. May be left un-set, but must
      * be set if the local Java platform's default algorithm is NOT "SunX509".
      */
-    public static final String SSLALGORITHM = "org.warlock.http.spine.sslalgorithm";
+    public static final String SSLALGORITHM = "uk.nhs.digital.mait.spinetools.http.spine.sslalgorithm";
     
     // This is static because the security context will be called from the LdapContext
     // using the default constructpr, and we need to have the provider available to it.

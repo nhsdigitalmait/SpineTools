@@ -25,8 +25,8 @@ import uk.nhs.digital.mait.spinetools.spine.messaging.Sendable;
  * Simple implementation of a SessionCaptor that saves to a file based on message id.
  *
  * The file is controlled by two properties:
- * <code>org.warlock.spine.messaging.BasicSessionCaptor.directory</code> holds the directory name to which the files are written
- * <code>org.warlock.spine.messaging.BasicSessionCaptor.extension</code> is the file name extension to use (default .message)
+ * <code>uk.nhs.digital.mait.spinetools.spine.messaging.BasicSessionCaptor.directory</code> holds the directory name to which the files are written
+ * <code>uk.nhs.digital.mait.spinetools.spine.messaging.BasicSessionCaptor.extension</code> is the file name extension to use (default .message)
  *
  * @author Damian Murphy damian.murphy@hscic.gov.uk
  */
@@ -35,8 +35,8 @@ public class BasicSessionCaptor
 {
     private static final String SEPARATOR = "\n\n\n\n";
     private static final String DEFAULT_EXTENSION = ".message";
-    private static final String DIRECTORYPROPERTY = "org.warlock.spine.messaging.BasicSessionCaptor.directory";
-    private static final String EXTENSIONPROPERTY = "org.warlock.spine.messaging.BasicSessionCaptor.extension";
+    private static final String DIRECTORYPROPERTY = "uk.nhs.digital.mait.spinetools.spine.messaging.BasicSessionCaptor.directory";
+    private static final String EXTENSIONPROPERTY = "uk.nhs.digital.mait.spinetools.spine.messaging.BasicSessionCaptor.extension";
     
     private static final SimpleDateFormat FORMAT = new SimpleDateFormat("yyyyMMddHHmmss");
     

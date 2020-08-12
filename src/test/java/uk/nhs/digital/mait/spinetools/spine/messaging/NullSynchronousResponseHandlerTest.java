@@ -44,9 +44,9 @@ public class NullSynchronousResponseHandlerTest {
 
     @BeforeClass
     public static void setUpClass() {
-        System.setProperty("org.warlock.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
-        System.setProperty("org.warlock.spine.sds.myasid", "SIAB-001");
-        System.setProperty("org.warlock.spine.sds.mypartykey", "YEA-801248");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.myasid", "SIAB-001");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.mypartykey", "YEA-801248");
     }
 
     @AfterClass

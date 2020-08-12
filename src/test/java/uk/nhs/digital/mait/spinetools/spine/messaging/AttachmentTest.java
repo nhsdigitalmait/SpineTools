@@ -30,23 +30,23 @@ import org.w3c.dom.Document;
 public class AttachmentTest {
 
     private AttachmentImpl instance;
-    
+
     public AttachmentTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
         instance = new AttachmentImpl();
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -85,6 +85,7 @@ public class AttachmentTest {
 
     /**
      * Test of getMimeType method, of class Attachment.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -99,6 +100,7 @@ public class AttachmentTest {
 
     /**
      * Test of stripMimeHeaders method, of class Attachment.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -112,12 +114,13 @@ public class AttachmentTest {
 
     /**
      * Test of parseReceivedXml method, of class Attachment.
+     *
      * @throws java.lang.Exception
      */
     @Test
     public void testParseReceivedXml() throws Exception {
         System.out.println("parseReceivedXml");
-        String s="mime\r\n\r\n<a/>";
+        String s = "mime\r\n\r\n<a/>";
         String expResult = "a";
         Document result = instance.parseReceivedXml(s);
         assertEquals(expResult, result.getDocumentElement().getLocalName());
@@ -216,7 +219,7 @@ public class AttachmentTest {
     }
 
     public class AttachmentImpl extends Attachment {
-        
+
         public AttachmentImpl() {
             super();
         }
@@ -231,5 +234,5 @@ public class AttachmentTest {
             return "";
         }
     }
-    
+
 }

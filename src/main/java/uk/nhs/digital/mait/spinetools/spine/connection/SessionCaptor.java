@@ -28,7 +28,7 @@ public interface SessionCaptor {
     
     /**
      * Do something to capture the session details. This is called from the Spine Tools
-     * transmitter if an implementation is declared using the <code>org.warlock.spine.messaging.sessioncaptureclass</code>
+     * transmitter if an implementation is declared using the <code>uk.nhs.digital.mait.spinetools.spine.messaging.sessioncaptureclass</code>
      * property. The Session getOnTheWireRequest() and getOnTheWireResponse() methods can be used to extract
      * session content.
      * 

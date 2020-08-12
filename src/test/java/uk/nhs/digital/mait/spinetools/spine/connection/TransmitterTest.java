@@ -49,19 +49,19 @@ public class TransmitterTest {
 
     @BeforeClass
     public static void setUpClass() {
-        System.setProperty("org.warlock.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
-        System.setProperty("org.warlock.spine.sds.myasid", MY_ASID);
-        System.setProperty("org.warlock.spine.sds.mypartykey", MY_PARTY_KEY);
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.myasid", MY_ASID);
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.mypartykey", MY_PARTY_KEY);
 
-        System.setProperty("org.warlock.http.spine.certs", System.getenv("TKWROOT") + "/contrib/Test_Certificates/TLS_Test_Certificates/Test01/test01.jks");
-        System.setProperty("org.warlock.http.spine.sslcontextpass", "test01tls_moscow");
+        System.setProperty("uk.nhs.digital.mait.spinetools.http.spine.certs", System.getenv("TKWROOT") + "/contrib/Test_Certificates/TLS_Test_Certificates/Test01/test01.jks");
+        System.setProperty("uk.nhs.digital.mait.spinetools.http.spine.sslcontextpass", "test01tls_moscow");
 
-        System.setProperty("org.warlock.spine.connection.myip", MY_IP_ADDRESS);
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.connection.myip", MY_IP_ADDRESS);
 
-        System.setProperty("org.warlock.spine.sds.url", "http://localhost");
-        System.setProperty("org.warlock.spine.sds.urlresolver", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/urlresolver.txt");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.url", "http://localhost");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.urlresolver", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/urlresolver.txt");
 
-        System.setProperty("org.warlock.spine.messaging.sessioncaptureclass", "uk.nhs.digital.mait.spinetools.spine.connection.BasicSessionCaptor");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.messaging.sessioncaptureclass", "uk.nhs.digital.mait.spinetools.spine.connection.BasicSessionCaptor");
     }
 
     @AfterClass

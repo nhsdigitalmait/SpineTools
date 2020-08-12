@@ -347,11 +347,11 @@ public class SpineMessageHandler
      */
     private void doAsynchronousAck(String ack) {
         if (ConditionalCompilationControls.TESTHARNESS) {
-            final String ASYNCRESPONSEDELAYCOUNTDOWN = "org.warlock.spine.asyncresponsedelaycountdown";
+            final String ASYNCRESPONSEDELAYCOUNTDOWN = "uk.nhs.digital.mait.spinetools.spine.asyncresponsedelaycountdown";
             String prop = System.getProperty(ASYNCRESPONSEDELAYCOUNTDOWN);
             if (prop != null && prop.trim().toLowerCase().equals("y")) {
                 long asynchronousResponseDelay = 0;
-                final String ASYNCHRONOUSRESPONSEDELAY = "org.warlock.spine.asynchronousebxmlreply.delay";
+                final String ASYNCHRONOUSRESPONSEDELAY = "uk.nhs.digital.mait.spinetools.spine.asynchronousebxmlreply.delay";
                 String srd = System.getProperty(ASYNCHRONOUSRESPONSEDELAY);
                 if (srd != null) {
                     try {

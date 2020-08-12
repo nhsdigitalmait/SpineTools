@@ -42,13 +42,13 @@ public class DefaultFileSaveSynchronousResponseHandler
      * System property. Holds the path where responses are written. Note that if
      * this property is not set, the system "user.dir" property is used.
      */
-    private static final String SAVE_DIRECTORY = "org.warlock.spine.messaging.defaultsynchronousresponsehandler.filesavedirectory";
+    private static final String SAVE_DIRECTORY = "uk.nhs.digital.mait.spinetools.spine.messaging.defaultsynchronousresponsehandler.filesavedirectory";
 
     /**
      * System property. Set to something beginning with "y" or "Y" to cause the
      * fully-qualified path name of the file, to be written to System.out.
      */
-    private static final String REPORT_FILENAME = "org.warlock.spine.messaging.defaultsynchronousresponsehandler.reportfilename";
+    private static final String REPORT_FILENAME = "uk.nhs.digital.mait.spinetools.spine.messaging.defaultsynchronousresponsehandler.reportfilename";
 
     private File fileSaveDirectory = null;
     private boolean reportFilename = false;

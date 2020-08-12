@@ -44,21 +44,21 @@ public class DefaultFileSaveSynchronousResponseHandlerTest {
 
     @BeforeClass
     public static void setUpClass() {
-        System.setProperty("org.warlock.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
-        System.setProperty("org.warlock.spine.sds.myasid", "SIAB-001");
-        System.setProperty("org.warlock.spine.sds.mypartykey", "YEA-801248");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.myasid", "SIAB-001");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.mypartykey", "YEA-801248");
 
-        System.setProperty("org.warlock.http.spine.certs", System.getenv("TKWROOT") + "/config/ITK_Correspondence/certs/tls.jks");
-        System.setProperty("org.warlock.http.spine.sslcontextpass", "password");
+        System.setProperty("uk.nhs.digital.mait.spinetools.http.spine.certs", System.getenv("TKWROOT") + "/config/ITK_Correspondence/certs/tls.jks");
+        System.setProperty("uk.nhs.digital.mait.spinetools.http.spine.sslcontextpass", "password");
 
-        System.setProperty("org.warlock.spine.connection.myip", "127.0.0.1");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.connection.myip", "127.0.0.1");
 
-        System.setProperty("org.warlock.spine.sds.url", "http://localhost");
-        System.setProperty("org.warlock.spine.sds.urlresolver", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/urlresolver.txt");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.url", "http://localhost");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.urlresolver", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/urlresolver.txt");
 
-        System.setProperty("org.warlock.spine.messaging.defaultsynchronousresponsehandler.filesavedirectory", "test/saved_messages_directory");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.messaging.defaultsynchronousresponsehandler.filesavedirectory", "test/saved_messages_directory");
 
-        saved_messages_directory = new File(System.getProperty("org.warlock.spine.messaging.defaultsynchronousresponsehandler.filesavedirectory"));
+        saved_messages_directory = new File(System.getProperty("uk.nhs.digital.mait.spinetools.spine.messaging.defaultsynchronousresponsehandler.filesavedirectory"));
 
         saved_messages_directory.mkdirs();
     }

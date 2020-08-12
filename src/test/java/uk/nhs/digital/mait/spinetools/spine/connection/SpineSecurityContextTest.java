@@ -60,8 +60,8 @@ public class SpineSecurityContextTest {
 
     @BeforeClass
     public static void setUpClass() throws IOException {
-        System.setProperty("org.warlock.http.spine.certs", System.getenv("TKWROOT") + "/contrib/Test_Certificates/TLS_Test_Certificates/Test01/test01.jks");
-        System.setProperty("org.warlock.http.spine.sslcontextpass", "test01tls_moscow");
+        System.setProperty("uk.nhs.digital.mait.spinetools.http.spine.certs", System.getenv("TKWROOT") + "/contrib/Test_Certificates/TLS_Test_Certificates/Test01/test01.jks");
+        System.setProperty("uk.nhs.digital.mait.spinetools.http.spine.sslcontextpass", "test01tls_moscow");
 
         ssf = ServerSocketFactory.getDefault();
         serverSocket = ssf.createServerSocket(SERVER_LISTEN_PORT);

@@ -52,18 +52,18 @@ public class ListenerTest {
 
     @BeforeClass
     public static void setUpClass() throws FileNotFoundException, Exception {
-        System.setProperty("org.warlock.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
-        System.setProperty("org.warlock.spine.sds.myasid", "SIAB-001");
-        System.setProperty("org.warlock.spine.sds.mypartykey", "YEA-801248");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.cachedir", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/transmitter_source/cache");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.myasid", "SIAB-001");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.mypartykey", "YEA-801248");
 
-        System.setProperty("org.warlock.http.spine.certs", System.getenv("TKWROOT") + "/config/ITK_Correspondence/certs/tls.jks");
-        System.setProperty("org.warlock.http.spine.sslcontextpass", "password");
+        System.setProperty("uk.nhs.digital.mait.spinetools.http.spine.certs", System.getenv("TKWROOT") + "/config/ITK_Correspondence/certs/tls.jks");
+        System.setProperty("uk.nhs.digital.mait.spinetools.http.spine.sslcontextpass", "password");
 
-        System.setProperty("org.warlock.spine.connection.myip", "127.0.0.1");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.connection.myip", "127.0.0.1");
 
-        System.setProperty("org.warlock.spine.sds.url", "http://localhost");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.url", "http://localhost");
         
-        System.setProperty("org.warlock.spine.sds.urlresolver", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/urlresolver.txt");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.sds.urlresolver", System.getenv("TKWROOT") + "/config/SPINE_ITKTrunk_Client/urlresolver.txt");
         FileInputStream fis = new FileInputStream(System.getenv("TKWROOT") + "/contrib/SPINE_Test_Messages/MTH_Test_Messages/PDS2008A_Example_Input_Msg/PRPA_IN000203UK03_MCCI_IN010000UK13_1658.xml");
         ebXmlMessage = new EbXmlMessage(fis);
     }

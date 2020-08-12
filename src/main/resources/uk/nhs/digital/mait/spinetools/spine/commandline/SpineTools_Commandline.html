@@ -89,12 +89,12 @@ Each command has its own set of parameters, although three common parameters are
 
 <p>
 <ul>
-<li><i>targetASID</i> overrides the <tt>org.warlock.spine.toasid</tt> property</li>
-<li><i>targetPartyKey</i> overrides the <tt>org.warlock.spine.topartykey</tt> property</li>
-<li><i>odsCode</i> overrides the <tt>org.warlock.spine.odstarget </tt>property</li>
-<li><i>authorRole</i> overrides the <tt>org.warlock.spine.authorrole</tt> property</li>
-<li><i>authorURP</i> overrides the <tt>org.warlock.spine.authorurp</tt> property</li>
-<li><i>authorUID</i> overrides the <tt>org.warlock.spine.authoruid</tt> property</li>
+<li><i>targetASID</i> overrides the <tt>uk.nhs.digital.mait.spinetools.spine.toasid</tt> property</li>
+<li><i>targetPartyKey</i> overrides the <tt>uk.nhs.digital.mait.spinetools.spine.topartykey</tt> property</li>
+<li><i>odsCode</i> overrides the <tt>uk.nhs.digital.mait.spinetools.spine.odstarget </tt>property</li>
+<li><i>authorRole</i> overrides the <tt>uk.nhs.digital.mait.spinetools.spine.authorrole</tt> property</li>
+<li><i>authorURP</i> overrides the <tt>uk.nhs.digital.mait.spinetools.spine.authorurp</tt> property</li>
+<li><i>authorUID</i> overrides the <tt>uk.nhs.digital.mait.spinetools.spine.authoruid</tt> property</li>
 </ul>
 </p>
 
@@ -133,7 +133,7 @@ Sends a single file containing HL7 interaction XML.
 </p>
 
 <p>
-The <i>odsCode</i> property override is of the recipient. This will default to the value of the <tt>org.warlock.spine.odstarget</tt> system property. The <i>targetPartyKey</i> property override can be used to refine any SDS lookup on the odsCode but must be used with caution as it can result in no resolution of target endpoint details. Other property overrides are ignored. 
+The <i>odsCode</i> property override is of the recipient. This will default to the value of the <tt>uk.nhs.digital.mait.spinetools.spine.odstarget</tt> system property. The <i>targetPartyKey</i> property override can be used to refine any SDS lookup on the odsCode but must be used with caution as it can result in no resolution of target endpoint details. Other property overrides are ignored. 
 </p>
 
 <p>
@@ -210,7 +210,7 @@ Usage: sendall directory qualifier
 </p>
 
 <p>
-The <i>odsCode</i> property override is of the recipient. This will default to the value of the <tt>org.warlock.spine.odstarget</tt> system property. The <i>targetPartyKey</i> property override can be used to refine any SDS lookup on the odsCode but must be used with caution as it can result in no resolution of target endpoint details. Other property overrides are ignored. 
+The <i>odsCode</i> property override is of the recipient. This will default to the value of the <tt>uk.nhs.digital.mait.spinetools.spine.odstarget</tt> system property. The <i>targetPartyKey</i> property override can be used to refine any SDS lookup on the odsCode but must be used with caution as it can result in no resolution of target endpoint details. Other property overrides are ignored. 
 </p>
 
 <p>

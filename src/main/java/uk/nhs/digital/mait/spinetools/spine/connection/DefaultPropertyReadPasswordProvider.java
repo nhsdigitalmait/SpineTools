@@ -25,7 +25,7 @@ package uk.nhs.digital.mait.spinetools.spine.connection;
  * intended to be suitable for production use.</b>
  * 
  * Passwords for this class are stored insecurely, in clear, in any properties file
- * that feeds System.properties, against "org.warlock.spine.connection.password", and
+ * that feeds System.properties, against "uk.nhs.digital.mait.spinetools.spine.connection.password", and
  * will support retrieval of other passwords by type, where the password type is used
  * as the property name.
  * 
@@ -38,7 +38,7 @@ package uk.nhs.digital.mait.spinetools.spine.connection;
 public class DefaultPropertyReadPasswordProvider 
     implements PasswordProvider
 {
-   private static final String PASSWORD_PROPERTY = "org.warlock.spine.connection.password"; 
+   private static final String PASSWORD_PROPERTY = "uk.nhs.digital.mait.spinetools.spine.connection.password"; 
    
    @Override
    public String getPassword()

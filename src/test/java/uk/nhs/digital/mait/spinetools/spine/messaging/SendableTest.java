@@ -32,23 +32,23 @@ import static org.junit.Assert.*;
 public class SendableTest {
 
     private SendableImpl instance;
-    
+
     public SendableTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
         instance = new SendableImpl();
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -370,5 +370,5 @@ public class SendableTest {
         public void persist() throws IOException {
         }
     }
-    
+
 }

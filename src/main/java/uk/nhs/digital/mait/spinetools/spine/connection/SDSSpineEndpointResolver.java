@@ -52,7 +52,7 @@ public class SDSSpineEndpointResolver
     /**
      * REQUIRED System property. Directory on disk under which to write the SDS endpoint cache files.
      */
-    public static final String CACHE_DIR_PROPERTY = "org.warlock.spine.sds.cachedir";
+    public static final String CACHE_DIR_PROPERTY = "uk.nhs.digital.mait.spinetools.spine.sds.cachedir";
     
     /**
      * System property. Cache refresh period. This is currently unused, and may be removed in
@@ -61,17 +61,17 @@ public class SDSSpineEndpointResolver
      * done manually (manual force refresh) or by an external, automated process. However it
      * works, cache refresh is currently delegated to something external to the MHS.
      */
-    public static final String CACHE_REFRESH_PROPERTY = "org.warlock.spine.sds.cacherefresh";
+    public static final String CACHE_REFRESH_PROPERTY = "uk.nhs.digital.mait.spinetools.spine.sds.cacherefresh";
     
     /**
      * REQUIRED System property. Local ASID.
      */
-    public static final String MY_ASID_PROPERTY = "org.warlock.spine.sds.myasid";
+    public static final String MY_ASID_PROPERTY = "uk.nhs.digital.mait.spinetools.spine.sds.myasid";
     
     /**
      * REQUIRED System property. Local party key.
      */
-    public static final String MY_PARTY_KEY_PROPERTY = "org.warlock.spine.sds.mypartykey";
+    public static final String MY_PARTY_KEY_PROPERTY = "uk.nhs.digital.mait.spinetools.spine.sds.mypartykey";
     
     /**
      * System property. Optional location of a "URL resolver" file that maps service/interaction
@@ -80,7 +80,7 @@ public class SDSSpineEndpointResolver
      * sender's perspective) then this configuration may be omitted. However if it is omitted then
      * any Spine forwarded messaging will fail.
      */
-    public static final String URL_RESOLVER_FILE_PROPERTY = "org.warlock.spine.sds.urlresolver";
+    public static final String URL_RESOLVER_FILE_PROPERTY = "uk.nhs.digital.mait.spinetools.spine.sds.urlresolver";
     
     private static final int DEFAULT_CACHE_REFRESH = -1;
     

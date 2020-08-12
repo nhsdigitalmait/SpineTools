@@ -53,42 +53,42 @@ public class ConnectionManager {
      * the password from System properties and is <b>not recommended</b> for production
      * use.
      */
-    private static final String PASSWORD_PROVIDER = "org.warlock.spine.connection.passwordproviderclass";
+    private static final String PASSWORD_PROVIDER = "uk.nhs.digital.mait.spinetools.spine.connection.passwordproviderclass";
     
     /**
      * System property. Directory used for persisting reliable messages.
      */
-    private static final String MESSAGE_DIRECTORY = "org.warlock.spine.messaging.messagedirectory";
+    private static final String MESSAGE_DIRECTORY = "uk.nhs.digital.mait.spinetools.spine.messaging.messagedirectory";
     
     /**
      * System property. Directory used by the message expiry handler to save reliable messages that
      * have exceeded either their persistDuration or their retry counts without
      * getting an acknowledgment or an explicit error.
      */
-    private static final String EXPIRED_DIRECTORY = "org.warlock.spine.messaging.expireddirectory";
+    private static final String EXPIRED_DIRECTORY = "uk.nhs.digital.mait.spinetools.spine.messaging.expireddirectory";
     
     /**
      * System property. This is the period in milliseconds that the "retry process" is to 
      * run to check for reliable messaging retries, and also to handle expiry. Default value
      * is 30,000 (30 seconds).
      */
-    private static final String RETRY_TIMER_PERIOD = "org.warlock.spine.messaging.retrytimerperiod";
+    private static final String RETRY_TIMER_PERIOD = "uk.nhs.digital.mait.spinetools.spine.messaging.retrytimerperiod";
     
     /**
      * System property. Name of a file containing persistDuration values, by service/interaction
      * type. This is used by the Listener process so that it has information on the persistDuration
      * value to use for an inbound reliable message (specifically, to scope de-duplication), 
      * without its having to consult SDS. If this is not set, the internal version is used which
-     * can be found at org.warlock.spine.connection.persistDurations.txt.
+     * can be found at uk.nhs.digital.mait.spinetools.spine.connection.persistDurations.txt.
      */
-    private static final String PERSIST_DURATION_FILE = "org.warlock.spine.messaging.persistdurations";
+    private static final String PERSIST_DURATION_FILE = "uk.nhs.digital.mait.spinetools.spine.messaging.persistdurations";
     
     /**
      * REQUIRED System property. Value of local IP address to populate the "From" element of
      * a Spine SOAP message. This is provided as a system property to avoid the MHS having
      * to make an arbitrary guess on systems with multiple interfaces.
      */
-    private static final String MY_IP = "org.warlock.spine.connection.myip";
+    private static final String MY_IP = "uk.nhs.digital.mait.spinetools.spine.connection.myip";
     
     /**
      * REQUIRED System property. ASID for this MHS instance.
@@ -96,7 +96,7 @@ public class ConnectionManager {
      * Note that as of the current version, multiple ASIDs for a single MHS instance
      * are not yet supported.
      */
-    private static final String MY_ASID = "org.warlock.spine.sds.myasid";
+    private static final String MY_ASID = "uk.nhs.digital.mait.spinetools.spine.sds.myasid";
     
     /**
      * REQUIRED System property. Party key for this MHS instance.
@@ -104,14 +104,14 @@ public class ConnectionManager {
      * As of the current version, multiple party keys in a single MHS instance
      * are not yet supported.
      */
-    private static final String MY_PARTYKEY = "org.warlock.spine.sds.mypartykey";
+    private static final String MY_PARTYKEY = "uk.nhs.digital.mait.spinetools.spine.sds.mypartykey";
     
     /**
-     * System property. If set this will declare a class implementing org.warlock.spine.connection.SessionCaptor
+     * System property. If set this will declare a class implementing uk.nhs.digital.mait.spinetools.spine.connection.SessionCaptor
      * which will be used by the transmitter to record messages transmitted over the wire, and their synchronous
      * responses.
      */
-    private static final String SESSION_CAPTOR = "org.warlock.spine.messaging.sessioncaptureclass";
+    private static final String SESSION_CAPTOR = "uk.nhs.digital.mait.spinetools.spine.messaging.sessioncaptureclass";
     
     /**
      * System property. If this is set to something beginning with "y" or "Y", the 
@@ -119,7 +119,7 @@ public class ConnectionManager {
      * handler (i.e. used unless an explicit instance has been set for a request type)
      * for responses to synchronous requests.
      */
-    private static final String USE_NULL_DEFAULT_SYNCHRONOUS_HANDLER = "org.warlock.spine.sds.nulldefaultsynchronoushandler";
+    private static final String USE_NULL_DEFAULT_SYNCHRONOUS_HANDLER = "uk.nhs.digital.mait.spinetools.spine.sds.nulldefaultsynchronoushandler";
     
     /**
      * Source identification for logging.

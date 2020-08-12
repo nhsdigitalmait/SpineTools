@@ -38,7 +38,7 @@ import uk.nhs.digital.mait.spinetools.spine.logging.SpineToolsLogger;
  * colon delimiters replaced by equals signs to keep the names "filename safe"
  * on both Linux/Unix and Windows-based file systems), which gives a set of
  * directories under the cache root given by the
- * <code>org.warlock.spine.sds.cachedir</code> system property.<BR>Each target
+ * <code>uk.nhs.digital.mait.spinetools.spine.sds.cachedir</code> system property.<BR>Each target
  * party key then gets a file inside that directory, named after the party key.
  * The file is an instance of SdsTransmissionDetails serialised as JSON.<BR><BR>
  *

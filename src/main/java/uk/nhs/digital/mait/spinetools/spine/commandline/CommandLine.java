@@ -115,7 +115,7 @@ public class CommandLine {
         // The default listener port is 4430 so that Unix systems can listen on a non-privileged
         // port, and use firewall rules to re-direct from port 443 (well-known HTTPS) to 4430.
         // Windows doesn't have the notion of a "privileged port" so should by default listen on
-        // port 443. Users can override this in any case by setting the org.warlock.spine.listener.port
+        // port 443. Users can override this in any case by setting the uk.nhs.digital.mait.spinetools.spine.listener.port
         // property to a value of their choice.
         //
         String osName = System.getProperty("os.name");
@@ -128,22 +128,22 @@ public class CommandLine {
                 String[] override = a.split("=");
                 switch (override[0]) {
                     case "targetASID":
-                        System.setProperty("org.warlock.spine.toasid", override[1]);
+                        System.setProperty("uk.nhs.digital.mait.spinetools.spine.toasid", override[1]);
                         break;
                     case "targetPartyKey":
-                        System.setProperty("org.warlock.spine.topartykey", override[1]);
+                        System.setProperty("uk.nhs.digital.mait.spinetools.spine.topartykey", override[1]);
                         break;
                     case "odsCode":
-                        System.setProperty("org.warlock.spine.odstarget", override[1]);
+                        System.setProperty("uk.nhs.digital.mait.spinetools.spine.odstarget", override[1]);
                         break;
                     case "authorRole":
-                        System.setProperty("org.warlock.spine.authorrole", override[1]);
+                        System.setProperty("uk.nhs.digital.mait.spinetools.spine.authorrole", override[1]);
                         break;
                     case "authorURP":
-                        System.setProperty("org.warlock.spine.authorurp", override[1]);
+                        System.setProperty("uk.nhs.digital.mait.spinetools.spine.authorurp", override[1]);
                         break;
                     case "authorUID":
-                        System.setProperty("org.warlock.spine.authoruid", override[1]);
+                        System.setProperty("uk.nhs.digital.mait.spinetools.spine.authoruid", override[1]);
                         break;
                 }
             }
@@ -154,21 +154,21 @@ public class CommandLine {
                 dumpmessage = true;
             }
         }
-        if (System.getProperty("org.warlock.spine.listener.port") != null) {
-            listenerPort = Integer.parseInt(System.getProperty("org.warlock.spine.listener.port"));
+        if (System.getProperty("uk.nhs.digital.mait.spinetools.spine.listener.port") != null) {
+            listenerPort = Integer.parseInt(System.getProperty("uk.nhs.digital.mait.spinetools.spine.listener.port"));
         }
-        if (System.getProperty("org.warlock.spine.commandline.waitperiod") != null) {
-            waitPeriod = Integer.parseInt(System.getProperty("org.warlock.spine.commandline.waitperiod"));
+        if (System.getProperty("uk.nhs.digital.mait.spinetools.spine.commandline.waitperiod") != null) {
+            waitPeriod = Integer.parseInt(System.getProperty("uk.nhs.digital.mait.spinetools.spine.commandline.waitperiod"));
         }
-        if (System.getProperty("org.warlock.spine.commandline.delayperiod") != null) {
-            delayPeriod = Integer.parseInt(System.getProperty("org.warlock.spine.commandline.delayperiod"));
+        if (System.getProperty("uk.nhs.digital.mait.spinetools.spine.commandline.delayperiod") != null) {
+            delayPeriod = Integer.parseInt(System.getProperty("uk.nhs.digital.mait.spinetools.spine.commandline.delayperiod"));
         }
         try {
             ConnectionManager cm = ConnectionManager.getInstance();
 //            cm.loadPersistedMessages();
             SDSSpineEndpointResolver resolver = null;
             ArrayList<SdsTransmissionDetails> details = null;
-            String ods = System.getProperty("org.warlock.spine.odstarget");
+            String ods = System.getProperty("uk.nhs.digital.mait.spinetools.spine.odstarget");
             switch (op) {
                 case OP_RECEIVE:
                     cm.listen(listenerPort);
@@ -262,7 +262,7 @@ public class CommandLine {
 
 //                case OP_SDS:
 //                    String fullyQualifiedServiceName = args[2];
-//                    ods = System.getProperty("org.warlock.spine.odstarget");
+//                    ods = System.getProperty("uk.nhs.digital.mait.spinetools.spine.odstarget");
                 // do an SDS lookup for the given interaction (fully qualified service name)
 //                    details = resolver.getTransmissionDetails(fullyQualifiedServiceName, ods, null, null);
 //                    System.out.println("SDS returned " + details.size() + " entries for " + fullyQualifiedServiceName + " at " + ods + "\r\n");
@@ -317,14 +317,14 @@ public class CommandLine {
 
     private static void send(SpineHL7Message hl7, String svc, String ods)
             throws Exception {
-        if (System.getProperty("org.warlock.spine.authorrole") != null) {
-            hl7.setAuthorRole(System.getProperty("org.warlock.spine.authorrole"));
+        if (System.getProperty("uk.nhs.digital.mait.spinetools.spine.authorrole") != null) {
+            hl7.setAuthorRole(System.getProperty("uk.nhs.digital.mait.spinetools.spine.authorrole"));
         }
-        if (System.getProperty("org.warlock.spine.authorurp") != null) {
-            hl7.setAuthorUrp(System.getProperty("org.warlock.spine.authorurp"));
+        if (System.getProperty("uk.nhs.digital.mait.spinetools.spine.authorurp") != null) {
+            hl7.setAuthorUrp(System.getProperty("uk.nhs.digital.mait.spinetools.spine.authorurp"));
         }
-        if (System.getProperty("org.warlock.spine.authoruid") != null) {
-            hl7.setAuthorUid(System.getProperty("org.warlock.spine.authoruid"));
+        if (System.getProperty("uk.nhs.digital.mait.spinetools.spine.authoruid") != null) {
+            hl7.setAuthorUid(System.getProperty("uk.nhs.digital.mait.spinetools.spine.authoruid"));
         }
 
         StringBuilder sb = new StringBuilder(svc);

@@ -27,22 +27,22 @@ import static org.junit.Assert.*;
  * @author simonfarrow
  */
 public class EbXmlEventListenerTest {
-    
+
     public EbXmlEventListenerTest() {
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -66,5 +66,5 @@ public class EbXmlEventListenerTest {
         public void eventNotification(String msgId, String comment, String ack) {
         }
     }
-    
+
 }

@@ -47,7 +47,7 @@ public class DefaultPropertyReadPasswordProviderTest {
 
     @Before
     public void setUp() {
-        System.setProperty("org.warlock.spine.connection.password", "password");
+        System.setProperty("uk.nhs.digital.mait.spinetools.spine.connection.password", "password");
     }
 
     @After
@@ -72,7 +72,7 @@ public class DefaultPropertyReadPasswordProviderTest {
     @Test
     public void testGetPassword_String() throws Exception {
         System.out.println("getPassword");
-        String passwordType = "org.warlock.spine.connection.password";
+        String passwordType = "uk.nhs.digital.mait.spinetools.spine.connection.password";
         DefaultPropertyReadPasswordProvider instance = new DefaultPropertyReadPasswordProvider();
         String expResult = "password";
         String result = instance.getPassword(passwordType);
