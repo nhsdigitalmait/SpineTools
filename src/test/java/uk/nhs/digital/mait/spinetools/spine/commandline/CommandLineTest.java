@@ -106,14 +106,12 @@ public class CommandLineTest {
 
     /**
      * Test of main method, of class CommandLine.
+     * @throws java.lang.Exception
+     * see testMainReceive and Send
      */
     @Test
     public void testMain() throws Exception {
         System.out.println("main");
-        String[] args = null;
-        CommandLine.main(args);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
 }

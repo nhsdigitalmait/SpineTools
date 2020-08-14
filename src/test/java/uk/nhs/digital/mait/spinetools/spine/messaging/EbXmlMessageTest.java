@@ -27,6 +27,8 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Rule;
 import org.junit.contrib.java.lang.system.RestoreSystemProperties;
+import uk.nhs.digital.mait.spinetools.spine.connection.SDSSpineEndpointResolver;
+import uk.nhs.digital.mait.spinetools.spine.connection.SdsTransmissionDetails;
 
 /**
  *
@@ -39,6 +41,7 @@ public class EbXmlMessageTest {
             = new RestoreSystemProperties();
 
     private EbXmlMessage instance;
+    private SDSSpineEndpointResolver endPointResolver;
 
     public EbXmlMessageTest() {
     }
@@ -64,8 +67,8 @@ public class EbXmlMessageTest {
 
     @Before
     public void setUp() throws FileNotFoundException, Exception {
+        endPointResolver = new SDSSpineEndpointResolver();
         FileInputStream fis = new FileInputStream(
-//              System.getenv("TKWROOT") + "/contrib/SPINE_Test_Messages/MTH_Test_Messages/PDS2008A_Example_Input_Msg/PRPA_IN000203UK03_MCCI_IN010000UK13_1658.xml");
                 "src/test/resources/data/ITK_Trunk.message");
         instance = new EbXmlMessage(fis);
     }
@@ -154,13 +157,23 @@ public class EbXmlMessageTest {
 
     /**
      * Test of getResolvedUrl method, of class EbXmlMessage.
-     * This fails
+     *
+     * @throws java.lang.Exception
      */
     @Test
-    public void testGetResolvedUrl() {
+    public void testGetResolvedUrl() throws Exception {
         System.out.println("getResolvedUrl");
-        // only set by the other constructor for the class under test
-        String expResult = "";
+        String service = "urn:nhs:names:services:itk:COPC_IN000001GB01";
+        String odsCode = "YEA";
+        String asid = null;
+        String partyKey = null;
+
+        ArrayList<SdsTransmissionDetails> transmissionDetails = endPointResolver.getTransmissionDetails(service, odsCode, asid, partyKey);
+        SpineHL7Message m = instance.getHL7Message();
+
+        // different constructor
+        instance = new EbXmlMessage(transmissionDetails.get(0), m);
+        String expResult = "http://localhost:4848/reliablemessaging/intermediary";
         String result = instance.getResolvedUrl();
         assertEquals(expResult, result);
     }
@@ -179,6 +192,7 @@ public class EbXmlMessageTest {
 
     /**
      * Test of setResponse method, of class EbXmlMessage.
+     *
      * @throws java.lang.Exception
      */
     @Test
@@ -293,7 +307,7 @@ public class EbXmlMessageTest {
         System.out.println("getAttachments");
         String expResult = "ITK Trunk Message";
         ArrayList<Attachment> result = instance.getAttachments();
-        assertTrue(result.size()==1);
+        assertTrue(result.size() == 1);
         assertEquals(expResult, result.get(0).description);
     }
 
